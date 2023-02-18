@@ -7,45 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Document</title>
+    <title>calculator</title>
+    <style>
+        .calc1 {
+            width: 25%;
+        }
+
+        @media screen and (max-width: 430px) {
+            .calc1 {
+                width: 75%;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body >
 
-    <div class="border border-secondary container bg-warning mt-5 pb-5 rounded-5" style="width:25%;">
-        <!-- <h3 class="">calculator</h3> -->
-        <div class="mt-5">
-            <input id="result" class="text-end p-2 form-control rounded-5" type="text" placeholder="0" >
+    <div class="calc1 border container mt-5 pb-2 rounded-5 sm-col-12 ps-3 pe-3 shadow">
+        <div class="">
+            <input id="result" class="mt-5 text-end pe-3 pt-2 form-control border-warning rounded-5 shadow" type="text" placeholder="0">
         </div>
-        <div class="row mt-5 me-1 ms-2  ">
-            <div onclick="displayNum(7)" class="col-3 btn btn-outline-secondary ">7</div>
-            <div onclick="displayNum(8)" class="col-3 btn btn-outline-secondary ">8</div>
-            <div onclick="displayNum(9)" class="col-3 btn btn-outline-secondary ">9</div>
-            <div onclick="displayNum('/')" class="col-3 btn btn-outline-secondary ">/</div>
+        <div class="row mt-5 ms-4 sm-col-12 ">
+            <div onclick="displayNum(7)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">7</div>
+            <div onclick="displayNum(8)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">8</div>
+            <div onclick="displayNum(9)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">9</div>
+            <div onclick="displayNum('/')" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">/</div>
         </div>
-        <div class="row mt-2 me-1 ms-2 ">
-            <div onclick="displayNum(4)" class="col-3 btn btn-outline-secondary">4</div>
-            <div onclick="displayNum(5)" class="col-3 btn btn-outline-secondary ">5</div>
-            <div onclick="displayNum(6)" class="col-3 btn btn-outline-secondary">6</div>
-            <div onclick="displayNum('*')" class="col-3 btn btn-outline-secondary">*</div>
+        <div class="row mt-2 ms-4 ">
+            <div onclick="displayNum(4)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">4</div>
+            <div onclick="displayNum(5)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">5</div>
+            <div onclick="displayNum(6)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">6</div>
+            <div onclick="displayNum('*')" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">*</div>
         </div>
-        <div class="row mt-2 me-1 ms-2 ">
-            <div onclick="displayNum(1)" class="col-3 btn btn-outline-secondary ">1</div>
-            <div onclick="displayNum(2)" class="col-3 btn btn-outline-secondary">2</div>
-            <div onclick="displayNum(3)" class="col-3 btn btn-outline-secondary ">3</div>
-            <div onclick="displayNum('-')" class="col-3 btn btn-outline-secondary">-</div>
+        <div class="row mt-2 ms-4 ">
+            <div onclick="displayNum(1)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">1</div>
+            <div onclick="displayNum(2)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">2</div>
+            <div onclick="displayNum(3)" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">3</div>
+            <div onclick="displayNum('-')" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">-</div>
         </div>
-        <div class="row mt-2 me-1 ms-2 ">
-            <div onclick="calculation()" class="col-3 btn btn-outline-secondary">=</div>
-            <div onclick="displayNum('0')" class="col-3 btn btn-outline-secondary ">0</div>
-            <div onclick="displayNum('+')" class="col-3 btn btn-outline-secondary ">+</div>
-            <div onclick="displayNum('%')" class="col-3 btn btn-outline-secondary">%</div>
+        <div class="row mt-2 ms-4 ">
+            <div onclick="calculation()" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">=</div>
+            <div onclick="displayNum('0')" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">0</div>
+            <div onclick="displayNum('+')" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">+</div>
+            <div onclick="displayNum('%')" class=" col-2 btn btn-outline-info text-dark ms-2 rounded-4 shadow">%</div>
         </div>
-        <div class="row mt-2 me-1 ms-2 ">
-            <div onclick="allClear()" class="col-3 btn btn-outline-secondary ">AC</div>
-            <div onclick="displayNum('.')" class="col-3 btn btn-outline-secondary">.</div>
-            <div onclick="backSpace()" class="col-6 btn btn-outline-secondary text-light bg-black">&#9003</div>
+        <div class="row mt-2 ms-4 ">
+            <div onclick="allClear()" class=" col-2 btn btn-outline-info text-danger me-2 ms-2 rounded-4 shadow">AC</div>
+            <div onclick="displayNum('.')" class=" col-2 btn btn-outline-info text-dark me-2 ms-2 rounded-4 shadow">.</div>
+            <div onclick="backSpace()" class=" col-5 btn btn-outline-danger ms-1 rounded-4 shadow">
+                &#9003</div>
         </div>
+        <p class="text-center mt-3 text-black-50">calculator</p>
     </div>
 </body>
 <script src="./script.js"></script>
